@@ -22,7 +22,7 @@ eightballchoices = ["It is certain.",
                     "My sources say no.",
                     "Outlook not so good.",
                     "Very doubtful."]
-speech.say("Ask me a question!")
+speech.say("Ask me a question!", speed = 100, pitch=90, throat=110, mouth=105)
 while True:
     display.show('8')
     if accelerometer.was_gesture("shake") \
@@ -30,7 +30,7 @@ while True:
         display.clear()
         sleep(1000)
         reply = str(random.choice(eightballchoices))
-        speech.say(reply)
+        speech.say(reply, speed = 100, pitch=90, throat=110, mouth=105)
         #display.scroll(reply)
         sleep(500)
-        speech.say("Ask me another question!")
+        speech.say("Ask me another question!", speed = 100, pitch=90, throat=110, mouth=105)
